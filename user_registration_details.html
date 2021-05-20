@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .c{
+            border-radius: 5px;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-top: 5%;
+
+        }
+        .c1{
+            background-color: #f2f2f2;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        body{
+            opacity: 0;
+            transition: opacity 2s;
+        }
+    </style>
+    <script>
+        function status(){
+            document.body.style.opacity='1';
+            stat=document.getElementById('status').getAttribute('name');
+            if(stat=="CONFIRMED")
+                document.getElementById('status').style.color='green';
+            else
+                document.getElementById('status').style.color='red';
+        }
+    </script>
+</head>
+<body onload="status()">
+<div class="c">
+<div class="c1">
+<H3>Full Name: {{var1}}</H3><br>
+<H3>Email: {{var2}}</H3><br>
+<H3>Phone Number: {{var3}}</H3><br>
+<H3>ID proof: {{var5}}</H3><br>
+<H3>Date: {{var6}}</H3><br>
+    <label for="status"><h3>Status:</h3></label>
+<H3 id="status" name={{var10}}>{{var10}}</H3><br>
+<H3>Travelling from State: {{var4}}, District: {{var8}} ;
+    to State: {{var7}}, District: {{var9}}</H3><br>
+    <a href="/">Home Page</a>
+    </div>
+    </div>
+
+
+
+
+</body>
+</html>
